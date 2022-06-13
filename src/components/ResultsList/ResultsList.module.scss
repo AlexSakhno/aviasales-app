@@ -1,0 +1,41 @@
+.list {
+	margin: 0.8em 0 0;
+	padding: 0;
+	list-style: none;
+}
+
+.alertContainer {
+	padding-top: 10px;
+}
+
+.spinnerContainer {
+	height: 120px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.buttonMore {
+	line-height: 1.65em;
+	font-weight: 600;
+	color: #ffffff;
+	text-align: center;
+	text-transform: uppercase;
+
+	box-sizing: border-box;
+	width: 100%;
+	padding: 1.25em 1.65em;
+	margin-bottom: 2em;
+	background: #2196f3;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+
+	transition: background-color 0.3s;
+}
+
+.buttonMore:hover,
+.buttonMore:focus {
+	outline: none;
+	background: green;
+}

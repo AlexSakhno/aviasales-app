@@ -1,0 +1,39 @@
+.descriptionRow {
+	display: flex;
+	margin-bottom: 0.8em;
+
+	.descriptionColumn {
+		width: calc((100% - 3.3em) / 3);
+		margin-right: 1.65em;
+
+		.titleInfo {
+			display: block;
+			font-weight: 600;
+			line-height: 1.5em;
+			letter-spacing: 0.5px;
+			text-transform: uppercase;
+			color: #a0b0b9;
+		}
+
+		.info {
+			display: block;
+			font-weight: 600;
+			line-height: 1.5em;
+		}
+	}
+
+	.descriptionColumn:last-child {
+		margin-right: 0;
+	}
+
+	@media (max-width: 424.98px) {
+		.descriptionColumn {
+			width: calc(100% / 3);
+			margin-right: 0;
+		}
+	}
+}
+
+.descriptionRow:last-child {
+	margin-bottom: 0;
+}
