@@ -1,72 +1,39 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true
-    },
-    "ignorePatterns": ["node_modules", "dist", "build"],
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "plugin:prettier/recommended",
-        "plugin:import/errors",
-        "plugin:import/warnings",
-        "airbnb",
-        "plugin:react/jsx-runtime"
-    ],
-    "parser": "@babel/eslint-parser",
-
-    "parserOptions": {
-        "ecmaFeatures": {
-            "jsx": true
-        },
-        "ecmaVersion": 12,
-        "sourceType": "module",
-        "requireConfigFile": false,
-        "babelOptions": {
-            "presets": ["@babel/preset-react"]
-        }
-    },
-    "plugins": ["react", "prettier", "import"],
-    "rules": {
-        "no-shadow": "off",
-        "react/jsx-props-no-spreading": "off",
-        "react/button-has-type": "off",
-        "no-plusplus": "off",
-        "react/static-property-placement": "off",
-        "space-before-function-paren": "off",
-        "indent": ["error", 2],
-        "prettier/prettier": "off",
-        "linebreak-style": [0, "unix"],
-        "quotes": ["error", "single"],
-        "semi": ["error", "never"],
-        "react/react-in-jsx-scope": "off",
-        "react/prop-types": 0,
-        "import/extensions": 0,
-        "import/no-unresolved": [2, { "caseSensitive": false }],
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-        "import/order": [
-            2,
-            {
-                "groups": [
-                    "builtin",
-                    "external",
-                    "internal",
-                    "parent",
-                    "sibling",
-                    "index"
-                ],
-                "newlines-between": "always"
-            }
-        ]
-    },
-    "settings": {
-        "import/resolver": {
-            "node": {
-                "extensions": [".js", ".jsx", ".ts", ".tsx"],
-                "moduleDirectory": ["node_modules", "src/"]
-            }
-
-        }
-
-    }
+	"extends": ["airbnb", "airbnb/hooks", "eslint-config-prettier", "prettier"],
+	"plugins": ["react"],
+	"parser": "babel-eslint",
+	"env": {
+		"browser": true,
+		"jest": true
+	},
+	"rules": {
+		"default-param-last": "off",
+		"curly": ["error"],
+		"max-depth": ["warn", 4],
+		"id-length": ["warn", { "exceptions": ["i", "j"], "min": 2 }],
+		"no-lonely-if": ["error"],
+		"no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+		"no-shadow": ["off"],
+		"no-restricted-syntax": "off",
+		"class-methods-use-this": "off",
+		"react/function-component-definition": "off",
+		"jsx-a11y/href-no-hash": ["off"],
+		"jsx-a11y/anchor-is-valid": ["off"],
+		"react/jsx-filename-extension": ["off"],
+		"jsx-a11y/label-has-associated-control": [
+			"error",
+			{
+				"assert": "either"
+			}
+		],
+		"react/state-in-constructor": ["off"],
+		"react/jsx-props-no-spreading": ["off"],
+		"react/static-property-placement": "off"
+	},
+	"settings": {
+		"react": {
+			"pragma": "React",
+			"version": "detect"
+		}
+	}
 }
