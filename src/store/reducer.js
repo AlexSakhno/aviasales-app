@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux'
 
-// eslint-disable-next-line default-param-last
 function filter(
 	state = {
 		ALL: true,
@@ -21,7 +20,6 @@ function filter(
 			return { ...newFilter, ALL: !checkAllFilters }
 
 		case 'CHANGE_FILTER_ALL':
-			// eslint-disable-next-line guard-for-in
 			for (const key in newFilter) {
 				newFilter[key] = !state.ALL
 			}
